@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Retro - A Cozy Café</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto Slab', serif;
+      background-color: #fdf6e3;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #3e2723;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      z-index: 999;
+      transition: background-color 0.3s;
+    }
+    .navbar.scrolled {
+      background-color: #2c1b15;
+    }
+    .nav-item {
+      color: #f5ebe0;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    .nav-item:hover {
+      color: #ffc107;
+    }
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .section-box {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff7e6;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: #3e2723;
+    }
+    .menu-item {
+      margin: 20px 0;
+      font-size: 18px;
+      color: #4e342e;
+    }
+    footer {
+      background-color: #3e2723;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+    }
+    .cta-button {
+      background-color: #795548;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #a1887f;
+    }
+    .hours-table {
+      text-align: left;
+      margin: 20px auto;
+      max-width: 300px;
+    }
+    .hours-table td {
+      padding: 5px 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar" id="navbar">
+    <a href="#home" class="nav-item">Home</a>
+    <a href="#offers" class="nav-item">Offers</a>
+    <a href="#menu" class="nav-item">Menu</a>
+    <a href="#location" class="nav-item">Location</a>
+    <a href="#about" class="nav-item">About</a>
+  </div>
+
+  <section id="home">
+    <h1>Café Retro</h1>
+    <div class="section-box">
+      <p><em>Classic vibes, timeless taste ☕🎶</em></p>
+      <p>Rated ★★★★★ by retro lovers across the city</p>
+      <button class="cta-button">Reserve a Table</button>
+      <button class="cta-button">Order Now</button>
+    </div>
+  </section>
+
+  <section id="offers">
+    <h1>Special Offers</h1>
+    <div class="section-box">
+      <p>🎉 Buy 1 Get 1 on all Cappuccinos – Retro Wednesdays</p>
+      <p>🎵 Free Vinyl Coaster with Every Cold Brew</p>
+      <p>💳 Loyalty Card: Your 6th coffee is on us!</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h1>Menu Highlights</h1>
+    <div class="section-box">
+      <div class="menu-item"><strong>Classic Espresso</strong> – ₹120<br><em>Bold & bright, the true retro fuel</em></div>
+      <div class="menu-item"><strong>Retro Shake</strong> – ₹150<br><em>A vanilla milkshake with old-school charm</em></div>
+      <div class="menu-item"><strong>Rock'n Roll Roll</strong> – ₹100<br><em>Spiced veg wrap with retro sauce</em></div>
+      <div class="menu-item"><strong>Old Soul Brownie</strong> – ₹90<br><em>Gooey dark chocolate delight</em></div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h1>Our Location</h1>
+    <div class="section-box">
+      <p>📍 56 Retro Avenue, Coimbatore, Tamil Nadu</p>
+      <p>📞 +91 98765 43210</p>
+      <p><a href="https://www.google.com/maps" target="_blank">View on Google Maps</a></p>
+      <table class="hours-table">
+        <tr><td>Mon–Fri</td><td>9:00 AM – 9:00 PM</td></tr>
+        <tr><td>Sat–Sun</td><td>10:00 AM – 11:00 PM</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="about">
+    <h1>About Café Retro</h1>
+    <div class="section-box">
+      <p>Born from a love of vintage vinyls, neon lights, and comfort food – Café Retro is your throwback corner to unwind and reconnect.</p>
+      <p>We brew stories and espresso in a nostalgic atmosphere that invites good vibes, music, and conversations that matter.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Café Retro | Follow us on 
+    <i class="fab fa-instagram"></i> @caferetro | 
+    <i class="fab fa-facebook"></i> fb.com/caferetro
+  </footer>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>
